@@ -9,7 +9,7 @@ public class Website {
     private String title;
     private String url;
     private List<String> words;
-    private String description;
+    private String shortDescription;
 
     public Website(String url, String title, List<String> words) {
         this.url = url;
@@ -29,20 +29,20 @@ public class Website {
         return words;
     }
 
-    public String getDescription() {
-        return description;
+    public String getShortDescription() {
+        return shortDescription;
     }
 
     public void generateDescription(String word){
         int wordIndex = words.indexOf(word);
         List<String> listOfStrings = null;
-        description = "";
+        shortDescription = "";
 
         if (words.size() < 30) {
             for (String s : words) {
-                description += " " + s;
+                shortDescription += " " + s;
             }
-            description += " ...";
+            shortDescription += " ...";
             return;
         }
 
@@ -55,10 +55,10 @@ public class Website {
         }
 
         for (String s : listOfStrings) {
-            description += " " + s;
+            shortDescription += " " + s;
         }
 
-        description += " ...";
+        shortDescription += " ...";
     }
     /**
      * Method to return boolean of true or false if the words list contains the query
