@@ -21,7 +21,7 @@ import java.util.List;
  */
 @Configuration
 @EnableAutoConfiguration
-@Path("/")
+@Path("")
 public class SearchEngine extends ResourceConfig {
     private static QueryHandler queryHandler;
 
